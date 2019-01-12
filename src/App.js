@@ -1,15 +1,26 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {connect} from 'react-redux';
+import {Route, withRouter} from 'react-router-dom';
+import '../componentCSS/App.css';
 
-class App extends Component {
+import Header from './header';
+import LoginForm from './loginform';
+import WorkoutBoard from './workoutboard';
+
+class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <h1>EZ Fitness</h1>
+      <div>
+        <Header />
+        <Route exact path="/home" component={LoginForm} />
+        <Route exact path="/workouts" component={WorkoutBoard} />
       </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = state => ({
+	workouts: state.workouts
+});
+
+export default withRouter(connect(mapStateToProps)(App));
