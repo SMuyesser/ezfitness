@@ -1,0 +1,39 @@
+div.board {
+	margin-top: 50px;
+}
+
+div.workOutTopBar {
+  display: flex;
+}
+
+div.workOutTopBar form {
+  height: 100%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.workOutTopBar form input {
+  width: 50%;
+}
+
+.lists {
+    display: flex;
+    align-items: flex-start;
+}
+
+.hidden {
+	display: none;
+}
+
+.show-cursor {
+	cursor: pointer;
+}
+
+.top-margin {
+	margin-top: 50px;
+}
+
+form#exercise-form {
+  margin: 50px;
+}
